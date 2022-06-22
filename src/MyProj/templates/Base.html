@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+ <head>
+   <title>Coding for Django  - Title Bar</title>
+ </head>
+ <body>
+ 
+ {% include 'NavBar.html' %}
+
+ {%block abc%}
+  This content can be different for different .htmls
+ {%endblock%}
+ 
+ {%block def%}
+  <p>This content can be different for different .htmls</p>
+ {% endblock def %}
+ 
+ {% block ghi %}
+  <p>This content can be different for different .htmls</p>
+ {% endblock ghi %}
+ 
+ {% block jkl %}
+  <p>This content can be different for different .htmls</p>
+ {% endblock %} 
+
+ {% include 'SearchBar.html' %}
+ 
+ </body>
+</html>

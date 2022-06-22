@@ -1,0 +1,24 @@
+{% extends 'Base.html' %}
+
+{% block abc %}
+<h1>Hey guys</h1>
+<p>This is the new Contact template</p>
+{% endblock abc %}
+
+ {%block def%}
+ <p>
+  Context variables:	
+  {{my_txt}}, 
+  {{my_num}}, 
+  {{my_name}}, 
+  {{my_list}}
+ </p>
+ {% endblock def %}
+
+ {% block ghi %}
+  <p>
+  User info: 	
+  {{request.user}}
+  {{request.user.is_authenticate}}
+  </p>
+ {% endblock ghi %}

@@ -1,0 +1,30 @@
+{% extends 'Base.html' %}
+
+{% block abc %}
+<h1>Hey guys</h1>
+<h2>This is the new Social template</h2>
+{% endblock abc %}
+
+ {%block def%}
+ <ul>
+ {% for item in yo_list %}
+   {% if item == 100 %}
+     <li>{{forloop.counter}} :-  {{item|add:10}}</li>
+   {% elif item == "k" %}
+     <li>List item is alphabet k</li>
+   {% elif item == "django" %}
+     <li>{{forloop.counter}} :-  {{item|capfirst}}</li>
+   {% else %}
+     <li>{{forloop.counter}} :-  {{item}}</li>
+   {% endif %} 
+ {% endfor %}
+ </ul>
+ {% endblock def %}
+
+ {% block ghi %}
+  <p>
+  User info: 	
+  {{request.user}}
+  {{request.user.is_authenticate}}
+  </p>
+ {% endblock ghi %}

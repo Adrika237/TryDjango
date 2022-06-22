@@ -1,0 +1,37 @@
+{% extends 'Base.html' %}
+
+{% block abc %}
+<h1>Product Create template</h1>
+{% endblock abc %}
+
+
+ {% block def %}
+<form method = 'POST'>{% csrf_token %}
+    {{rawD_form.as_p}}
+<input type="submit" value="SAVE_D">
+</form>
+{% endblock def %}
+
+
+{% block ghi %}
+<form method = 'POST'>{% csrf_token %}
+    {{html_form.as_p}}
+<input type="submit" value="SAVE_H">
+</form>
+{% endblock ghi %}
+
+<!--Raw HTML form-->
+
+<!-- <form action = 'http://www.google.com/search' method = 'GET'>
+ <input type = "text"   name = 'q' placeholder="Your Search">
+ <input type="submit" value="SAVE">
+</form>  --> 
+
+ 
+<!--Raw HTML form-->
+ {% block jkl %}
+<!--  <form action = '.' method = 'POST'>{% csrf_token %}
+ <input type = "text"   name = 'pop' placeholder="Your Search">
+ <input type="submit" value="SAVE">
+</form>  -->
+ {% endblock %} 
